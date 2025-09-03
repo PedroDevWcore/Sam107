@@ -214,7 +214,7 @@ const DadosConexao: React.FC = () => {
 
   // Dados de conexão FTP reais baseados no código PHP
   const ftpData = {
-    servidor: '51.222.156.223', // IP real do servidor
+    servidor: 'stmv1.udicast.com', // Domínio do servidor Wowza
     usuario: userLogin, // Login do usuário baseado no email
     senha: 'Adr1an@2024!', // Senha real do sistema
     porta: '21' // Porta padrão FTP
@@ -227,12 +227,12 @@ const DadosConexao: React.FC = () => {
     aplicacao: 'samhost',
     rtmpUrl: user?.codigo_servidor ?
       `rtmp://servidor-${user.codigo_servidor}.wcore.com.br:1935/samhost` :
-      'rtmp://samhost.wcore.com.br:1935/samhost',
+      'rtmp://stmv1.udicast.com:1935/samhost',
     usuario: userLogin,
     streamKey: `${userLogin}_live`,
     hlsUrl: user?.codigo_servidor ?
       `http://servidor-${user.codigo_servidor}.wcore.com.br:1935/samhost/${userLogin}_live/playlist.m3u8` :
-      `http://samhost.wcore.com.br:1935/samhost/${userLogin}_live/playlist.m3u8`
+      `http://stmv1.udicast.com:1935/samhost/${userLogin}_live/playlist.m3u8`
   };
 
   const copyToClipboard = (text: string, label: string) => {
