@@ -364,7 +364,7 @@ const DadosConexao: React.FC = () => {
                 <div>
                   <p className="text-sm text-gray-600">Gravação</p>
                   <p className="text-xl font-bold">{obsStatus.recording ? 'ATIVA' : 'INATIVA'}</p>
-                </div>
+                <p>• Domínio: {ftpData.servidor}</p>
               </div>
             </div>
           </div>
