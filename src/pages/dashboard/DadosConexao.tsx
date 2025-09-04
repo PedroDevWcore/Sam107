@@ -222,17 +222,13 @@ const DadosConexao: React.FC = () => {
 
   // Dados do servidor FMS/RTMP real
   const fmsData = {
-    servidor: user?.codigo_servidor ? `servidor-${user.codigo_servidor}.wcore.com.br` : 'samhost.wcore.com.br',
+    servidor: 'stmv1.udicast.com',
     porta: '1935', // Porta RTMP correta
     aplicacao: 'samhost',
-    rtmpUrl: user?.codigo_servidor ?
-      `rtmp://servidor-${user.codigo_servidor}.wcore.com.br:1935/samhost` :
-      'rtmp://stmv1.udicast.com:1935/samhost',
+    rtmpUrl: 'rtmp://stmv1.udicast.com:1935/samhost',
     usuario: userLogin,
     streamKey: `${userLogin}_live`,
-    hlsUrl: user?.codigo_servidor ?
-      `http://servidor-${user.codigo_servidor}.wcore.com.br:1935/samhost/${userLogin}_live/playlist.m3u8` :
-      `http://stmv1.udicast.com:1935/samhost/${userLogin}_live/playlist.m3u8`
+    hlsUrl: `https://stmv1.udicast.com:1935/samhost/${userLogin}_live/playlist.m3u8`
   };
 
   const copyToClipboard = (text: string, label: string) => {
